@@ -172,6 +172,8 @@ http://localhost:8501
 - The reproduction of this system assumes you will use the same files avaiable here: [Bank Statements](assets/bank_statements)
 - The LLM does not take into account any other formats and may or may not produce a bad prediction and result if a different set of PDFs is being provided.
 
+#### To begin:
+
 - Upload a machine-readable bank statement PDF
 - Select the Configured bank name from the dropdown
 - Confirm the router decision shows:
