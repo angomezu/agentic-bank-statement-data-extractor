@@ -1,19 +1,25 @@
 # Agentic Workflow for Data Extraction From Bank Statements Using OpenAI API
 
-<!-- Technology Stack Logos -->
-<div align="center" style="display: flex; justify-content: center; gap: 24px; margin-top: 20px; margin-bottom: 20px;">
-  <img src="assets/images/python_logo.png" height="80" />
-  <img src="assets/images/pymupdf_logo.png" height="80" />
-  <img src="assets/images/OpenAI_Logo.jpg" height="80" />
-  <img src="assets/images/534702.png" height="80" />
-</div
+<div align="center">
 
-<p align="center">
-  <img src="assets/images/Second_Module_3.png" width=1250" />
-</p>
-<p align="center">
-  <em>Figure 1: Result of using agents to extract data from a bank statement PDF that is image-based.</em>
-</p>
+  <!-- Logos row -->
+  <div style="display: flex; justify-content: center;">
+    <img src="assets/images/python_logo.png" height="80" style="margin-right: 24px;" />
+    <img src="assets/images/pymupdf_logo_bg.png" height="80" style="margin-right: 24px;" />
+    <img src="assets/images/openai-white-lockup.png" height="80" style="margin-right: 24px;" />
+    <img src="assets/images/534702.png" height="80" />
+  </div>
+
+  <br>
+
+  <!-- Main image -->
+  <img src="assets/images/Second_Module_3.png" width="1250" />
+
+  <p>
+    <em>Figure 1: Result of using agents to extract data from a bank statement PDF that is image-based.</em>
+  </p>
+
+</div>
 
 Reliable data extraction from documentation (PDFs) remains a hard problem in production systems. Documents like bank statements vary widely across institutions and are frequently delivered as a mix of machine-readable PDFs and scanned, image-based documents. Layout changes, noisy tables, and inconsistent formatting routinely break rule-based parsers and template-driven solutions, forcing manual review and introducing downstream risk.
 
@@ -157,5 +163,10 @@ This design makes the current system suitable for **research, prototyping, and c
 
 ## Author
 
-Angel A. Barrera
-Agentic Systems • Data Engineering • Applied AI
+[Angel A. Barrera](https://www.linkedin.com/in/angomezu/)
+ML Engineer
+M.S. Data Science
+B.S. Computer Systems Engineering
+
+Check more projects here: [Portfolio](https://angomezu.github.io/)
+
