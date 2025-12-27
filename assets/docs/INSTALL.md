@@ -109,31 +109,42 @@ pip install -r requirements.txt
 ---
 ## 7. Configure Environment Variables
 
-Create a .env file at the project root (same level as requirements.txt).
+This variables will determine the speed, prediction accuracy, and **cost**.
 
+- Create a .env file at the project root (same level as requirements.txt).
+
+```bash
 OPENAI_API_KEY=YOUR_KEY_HERE
+```
 
-#### Text pipeline model (extraction / validation / repair)
+- Text pipeline model (extraction / validation / repair)
+
+```bash
 LLM_MODEL=gpt-4.1-mini
+```
 
-#### Vision model for OCR (defaults to LLM_MODEL if omitted)
+- Vision model for OCR (defaults to LLM_MODEL if omitted)
+
+```bash
 VISION_MODEL=gpt-4.1-mini
+```
 
-#### OCR rendering controls
+- OCR rendering controls
+
+```bash
 OCR_DPI=200
 OCR_MAX_PAGES=10
+```
 
-- Configuration Behavior
+#### Configuration Behavior
 
-#### LLM_MODEL
-Drives schema extraction, validation, and repair logic.
+- LLM_MODEL: Drives schema extraction, validation, and repair logic.
 
-#### VISION_MODEL
-Drives OCR for scanned PDFs.
-If omitted, the system falls back to LLM_MODEL.
+- VISION_MODEL
+  - Drives OCR for scanned PDFs.
+  - If omitted, the system falls back to LLM_MODEL.
 
-#### OCR_DPI and OCR_MAX_PAGES
-Control OCR quality vs. speed and cost.
+- OCR_DPI and OCR_MAX_PAGES: Control OCR quality vs. speed and cost.
 
 ---
 ## 8. Run the Streamlit UI (Local)
@@ -154,6 +165,12 @@ http://localhost:8501
 ## 9. Reproduce TEXT vs VISION Workflows
 
 #### 9.1 TEXT Run (Machine-Readable PDF)
+
+#### IMPORTANT: 
+
+- This workflow version has a deterministc approach; in the essence that the fields being extracted are determined by the two samples included in this repository.
+- The reproduction of this system assumes you will use the same files avaiable here: [Bank Statements](assets/bank_statements)
+- The LLM does not take into account any other formats and may or may not produce a bad prediction and result if a different set of PDFs is being provided.
 
 - Upload a machine-readable bank statement PDF
 - Select the Configured bank name from the dropdown
