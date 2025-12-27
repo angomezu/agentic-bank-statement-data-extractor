@@ -210,9 +210,89 @@ route = VISION
 
 ---
 
-## 10. Expected Artifacts and Outputs
+## 10. Agents Overview
 
-- Uploaded PDFs are saved under:
+#### Router Agent (`app/pdf_router.py`)
+- Inspects PDF content
+- Routes to:
+  - `TEXT` pipeline (machine-readable)
+  - `VISION` pipeline (scanned PDFs)
+
+#### TEXT Extraction Agent (`app/orchestrator_text.py`)
+- Uses `pdfplumber`
+- Extracts full schema from text
+- Validates and repairs until pass threshold
+
+#### VISION Extraction Agent (`app/orchestrator_vision.py`)
+- Renders pages to images via PyMuPDF
+- Performs OCR using a vision-capable LLM
+- Extracts OCR-specific schema
+- Shares the same validation/repair loop
+
+#### Validator Agent (`app/utility_pdf.py`)
+- Verifies each field against source text
+- Produces evidence quotes and confidence
+- Outputs PASS / FAIL / UNCERTAIN per field
+
+#### Repair Agent (loop logic in orchestrators)
+- Applies deterministic fixes
+- Re-extracts only failed fields
+- Tracks best round by pass rate
+
+---
+
+## 11. Extracted Schemas
+
+#### TEXT PDFs
+- bank_name (UI-configured)
+- customer_name
+- customer_address
+- account_number
+- statement_date
+- initial_balance
+- deposits_other_credits
+- ATM_Withdrawals_Debits
+- VISA_Check_Card_Purchases_Debits
+- Withdrawals_Other_Debits
+- total_checks_paid
+- ending_balance
+
+#### VISION / OCR PDFs
+- bank_name (UI-configured)
+- account_number
+- statement_date
+- beginning_balance
+- total_deposits_and_other_credits
+- total_withdrawals_and_other_debits
+- total_service_charges_fees
+- ending_balance
+
+---
+
+## 12. Outputs
+
+Each run returns:
+
+- **Final Table**  
+  Structured dictionary (exportable to CSV / Excel)
+
+- **Validation Report**  
+  Per-field:
+  - status
+  - extracted value
+  - evidence quote
+  - suggested value
+  - confidence
+  - reason
+
+- **Run Metadata**
+  - rounds_used
+  - best_round
+  - final_pass_rate
+  - OCR parameters (if applicable)
+ 
+
+- **Uploaded PDFs are saved under:**
 
 ```bash
 artifacts/
@@ -229,9 +309,10 @@ artifacts/rendered_pages/
   - final_report — per-field validation report
   - meta — run metadata (rounds, pass rate, OCR details)
 
+
 ---
 
-## 11. Troubleshooting (Common Issues)
+## 13. Troubleshooting (Common Issues)
 
 - Missing API key
   - Ensure OPENAI_API_KEY is set correctly in .env.
@@ -248,7 +329,7 @@ artifacts/rendered_pages/
     - It is intentionally never inferred from PDF content.
 ---
 
-## 12. Reproducibility Notes
+## 14. Reproducibility Notes
 
 - Validation and repair loops are bounded (no infinite retries)
 - Best round is selected by highest validation pass rate
