@@ -163,10 +163,7 @@ This design makes the current system suitable for **research, prototyping, and c
 
 ## Author
 
-[Angel A. Barrera](https://www.linkedin.com/in/angomezu/)
-ML Engineer
-M.S. Data Science
-B.S. Computer Systems Engineering
+[Angel A. Barrera](https://www.linkedin.com/in/angomezu/) | ML Engineer, M.S. Data Science
 
-Check more projects here: [Portfolio](https://angomezu.github.io/)
+**Check more cool projects here:** [Portfolio](https://angomezu.github.io/)
 
