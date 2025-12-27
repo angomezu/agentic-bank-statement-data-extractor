@@ -45,6 +45,24 @@ It autonomously routes PDFs by modality (TEXT vs VISION), extracts schema-based 
 
 ---
 
+## Installation & Setup
+
+This project can be run locally to reproduce both **TEXT** and **VISION (OCR)** workflows.
+
+A full, step-by-step installation and reproducibility guide is provided separately to keep this README concise.
+
+👉 **See:** [`assets/docs/INSTALLATION.md`](assets/docs/INSTALLATION.md)
+
+The installation guide covers:
+- Environment setup (Python, virtualenv, dependencies)
+- OpenAI API configuration
+- Running the Streamlit UI
+- Reproducing TEXT vs VISION routing
+- Expected artifacts and outputs
+- Troubleshooting common issues
+
+---
+
 ## Agents Overview
 
 ### Router Agent (`app/pdf_router.py`)
@@ -126,24 +144,57 @@ Each run returns:
   - final_pass_rate
   - OCR parameters (if applicable)
 
----
-
-## Tech Stack
-
-- **Language:** Python 3.10+
-- **UI:** Streamlit
-- **PDF Text:** pdfplumber
-- **PDF → Image:** PyMuPDF (fitz)
-- **LLM / OCR:** OpenAI Responses API (text + vision)
-- **Data Handling:** JSON, pandas
 
 ---
+Security & Data Privacy
 
-## Local Installation
+PDFs are processed locally for routing and rendering
 
-```bash
-git clone https://github.com/angomezu/agentic-bank-statement-extractor.git
-cd agentic-bank-statement-extractor
-python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scripts\Activate.ps1
-pip install -r requirements.txt
+Only extracted text (TEXT pipeline) or rendered images (VISION pipeline) are sent to OpenAI APIs
+
+PDFs are not uploaded as files to OpenAI storage
+
+No training or persistence of user data by default
+
+Designed to support:
+
+On-prem deployment
+
+API isolation
+
+Database-backed auditing (future work)
+
+Planned Extensions
+
+Batch / multi-file processing
+
+Persistent storage (PostgreSQL / BigQuery)
+
+FastAPI service layer
+
+CRM / ERP integrations
+
+Additional OCR format adapters
+
+Role-based access and audit logging
+
+Research Positioning
+
+This project demonstrates:
+
+Agentic AI systems with bounded autonomy
+
+Evidence-based self-validation
+
+Reliable document understanding pipelines
+
+Practical AI safety via explicit invariants
+
+License
+
+MIT
+
+Author
+
+Angel A. Barrera
+Agentic Systems • Data Engineering • Applied AI
