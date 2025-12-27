@@ -1,4 +1,4 @@
-# Agentic Workflow for Data Extraction From Bank Statements Using OpenAI API
+# Self-Validating Agentic System for Bank Statement Documents 
 
 <div align="center">
 
