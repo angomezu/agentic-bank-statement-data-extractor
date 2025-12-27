@@ -1,6 +1,6 @@
 # Installation & Reproducibility Guide
 
-This document describes how to install, configure, and run the **D.A.R.E. Agentic Bank Statement Extraction System** locally in order to reproduce both **TEXT** and **VISION (OCR)** workflows.
+This document describes how to install, configure, and run the **Agentic Bank Statement Extraction System** locally in order to reproduce both **TEXT** and **VISION (OCR)** workflows.
 
 The instructions below assume no prior knowledge of the codebase.
 
