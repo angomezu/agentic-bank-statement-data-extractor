@@ -1,5 +1,13 @@
 # Agentic Workflow for Data Extraction From Bank Statements Using OpenAI API
 
+<!-- Technology Stack Logos -->
+<div align="center" style="display: flex; justify-content: center; gap: 24px; margin-top: 20px; margin-bottom: 20px;">
+  <img src="assets/images/python_logo.png" height="80" />
+  <img src="assets/images/pymupdf_logo.png" height="80" />
+  <img src="assets/images/OpenAI-Logo-2022.png" height="80" />
+  <img src="assets/images/534702.png" height="80" />
+</div
+
 <p align="center">
   <img src="assets/images/Second_Module_3.png" width=1250" />
 </p>
