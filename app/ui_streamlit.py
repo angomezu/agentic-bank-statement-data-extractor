@@ -31,6 +31,14 @@ def save_uploaded_file(uploaded_file) -> str:
 
 def main():
     st.title("Agentic AI Workflow for Data Extraction From Bank Statements")
+    st.info(
+    "🧪 **UI Sample Only**\n\n"
+    "This public demo showcases the **agentic workflow and UI behavior**.\n\n"
+    "❗ Running extraction requires a valid OpenAI API key, which is **not configured** "
+    "in this hosted environment.\n\n"
+    "To run the full system, clone the repository and configure your `.env` file locally.",
+    icon="ℹ️",
+    )
 
     uploaded = st.file_uploader("Upload a bank statement PDF", type=["pdf"])
     bank_choice = st.selectbox(
