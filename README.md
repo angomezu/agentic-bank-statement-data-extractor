@@ -1,4 +1,4 @@
-# Self-Validating Agentic System for Bank Statement Documents 
+# Self-Validating Agentic System for Bank Statements Data Extraction
 
 <div align="center">
 
