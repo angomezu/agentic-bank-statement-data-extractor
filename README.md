@@ -87,8 +87,10 @@ The installation guide covers:
   <img src="assets/images/architecture.png" width=1250" />
 </p>
 <p align="center">
-  <em>Figure 2: Agentic AI Workflow Architecture.</em>
+  <em>Figure 2: Agentic AI Workflow Architecture click image to open PDF.</em>
 </p>
+
+👉 **Check:** [Roadmap](assets/docs/Agentic_AI_Project_Architecture.pdf)
 
 ---
 
