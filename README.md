@@ -60,7 +60,7 @@ This project can be run locally to reproduce both **TEXT** and **VISION (OCR)** 
 
 A full, step-by-step installation and reproducibility guide is provided separately to keep this README concise.
 
-👉 **See:** [Installation Guide](assets/docs/INSTALLATION.md)
+👉 **See:** [Installation Guide](assets/docs/INSTALL.md)
 
 The installation guide covers:
 - Environment setup (Python, virtualenv, dependencies)
