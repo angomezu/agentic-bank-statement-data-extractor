@@ -12,6 +12,8 @@
 
   <br>
 
+  Check the [UI Demo](https://agentic-bank-statement-data-extractor-7rvue4pawucidhc9nflccd.streamlit.app/)
+
   <!-- Main image -->
   <img src="assets/images/Second_Module_3.png" width="1250" />
 
